@@ -103,7 +103,7 @@ I explore two frontiers:
         <p class="experience-list__date">Mar. 2025 - Sep. 2025</p>
       </div>
       <ul>
-        <li>Using pre-trained CNN/GNN encoders for LLaMA/Vicuna-13B in metabolite analysis.</li>
+        <li>Combined pre-trained CNN/GNN encoders with LLaMA and Vicuna-13B to enable multimodal metabolite analysis.</li>
       </ul>
     </div>
   </article>
@@ -136,7 +136,7 @@ I explore two frontiers:
         <p class="experience-list__date">Jun. 2024 - Sep. 2024</p>
       </div>
       <ul>
-        <li>Built multi-source information pipelines and a hybrid-retrieval RAG system for financial research.</li>
+        <li>Developed a hybrid-retrieval RAG system for financial research, with multi-source information pipelines supporting data ingestion and retrieval.</li>
       </ul>
     </div>
   </article>
