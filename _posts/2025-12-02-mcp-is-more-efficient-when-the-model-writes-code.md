@@ -43,47 +43,47 @@ There is a cost, though. Giving an agent code execution is not a free abstractio
 
 1. Tool definitions can become their own context-window problem.
 
-When an MCP client exposes a small number of tools, putting their names, descriptions, parameters, and schemas into context may be fine. The problem changes when the agent is connected to many MCP servers and the combined tool catalog reaches hundreds or thousands of tools. At that point, the model may process a huge amount of tool description text before it even starts working on the user's actual request. The tool catalog itself becomes token-heavy background noise.
+    When an MCP client exposes a small number of tools, putting their names, descriptions, parameters, and schemas into context may be fine. The problem changes when the agent is connected to many MCP servers and the combined tool catalog reaches hundreds or thousands of tools. At that point, the model may process a huge amount of tool description text before it even starts working on the user's actual request. The tool catalog itself becomes token-heavy background noise.
 
 2. Intermediate tool results are often more expensive than they are useful.
 
-Direct tool calling usually sends tool results back into the model context. That sounds natural, but it can be wasteful when the result is large and the model only needs a tiny part of it. A transcript, spreadsheet, document, or CRM query result can consume a large amount of context even if the agent only needs to extract one field, forward the content to another system, or calculate a short summary.
+    Direct tool calling usually sends tool results back into the model context. That sounds natural, but it can be wasteful when the result is large and the model only needs a tiny part of it. A transcript, spreadsheet, document, or CRM query result can consume a large amount of context even if the agent only needs to extract one field, forward the content to another system, or calculate a short summary.
 
 3. The model does not always need to see the data it is moving.
 
-This is one of the cleanest ideas in the article. If the agent is moving a meeting transcript from Google Drive into Salesforce, the model may not need to read the transcript. It needs to know which source, which destination, and what transformation or validation is required. The actual payload can flow through code, which reduces copying errors, saves context, and avoids making the model inspect data that is not relevant to the reasoning step.
+    This is one of the cleanest ideas in the article. If the agent is moving a meeting transcript from Google Drive into Salesforce, the model may not need to read the transcript. It needs to know which source, which destination, and what transformation or validation is required. The actual payload can flow through code, which reduces copying errors, saves context, and avoids making the model inspect data that is not relevant to the reasoning step.
 
 4. Wrapping MCP as a code API enables progressive disclosure.
 
-Instead of loading every MCP tool definition into the model context upfront, the system can expose a directory or module structure. The agent can first inspect a list of available servers or modules, then load the specific function definitions it needs. That is a better match for how agents already work with filesystems: look around, identify the relevant area, read the necessary files, and ignore the rest.
+    Instead of loading every MCP tool definition into the model context upfront, the system can expose a directory or module structure. The agent can first inspect a list of available servers or modules, then load the specific function definitions it needs. That is a better match for how agents already work with filesystems: look around, identify the relevant area, read the necessary files, and ignore the rest.
 
 5. Code is a better substrate for loops, retries, waiting, branching, and polling.
 
-Many workflows are not a single tool call. They involve waiting for a deployment to finish, polling a Slack channel, retrying a flaky request, branching on a status field, or looping through many records. Making the model take one turn per control-flow step is slow and context-expensive. Code can express the same logic directly, run it in one execution, and return only the meaningful result.
+    Many workflows are not a single tool call. They involve waiting for a deployment to finish, polling a Slack channel, retrying a flaky request, branching on a status field, or looping through many records. Making the model take one turn per control-flow step is slow and context-expensive. Code can express the same logic directly, run it in one execution, and return only the meaningful result.
 
 6. Filtering and aggregation should often happen before data returns to the model.
 
-If a tool call returns 10,000 spreadsheet rows, the model usually should not be the first place where filtering happens. Code can call MCP, filter the rows, compute counts, join records, extract fields, and return only the small set of values the model needs to judge. That changes the model's role from raw-data processor to reviewer of high-signal output.
+    If a tool call returns 10,000 spreadsheet rows, the model usually should not be the first place where filtering happens. Code can call MCP, filter the rows, compute counts, join records, extract fields, and return only the small set of values the model needs to judge. That changes the model's role from raw-data processor to reviewer of high-signal output.
 
 7. Keeping intermediate state outside the model context improves both efficiency and privacy.
 
-Intermediate MCP results do not always need to be visible to the model. If raw customer data, contact details, or private documents can stay inside the MCP client or execution environment, the model only sees the logged or returned values. For more sensitive workflows, the client can tokenize or encrypt values and later resolve them through a lookup when another MCP tool needs the real data. The important point is that the model context should not automatically become the place where every sensitive payload is exposed.
+    Intermediate MCP results do not always need to be visible to the model. If raw customer data, contact details, or private documents can stay inside the MCP client or execution environment, the model only sees the logged or returned values. For more sensitive workflows, the client can tokenize or encrypt values and later resolve them through a lookup when another MCP tool needs the real data. The important point is that the model context should not automatically become the place where every sensitive payload is exposed.
 
 8. Filesystem state makes long-running agent work more durable.
 
-Conversation history is a weak place to store operational state. It gets long, it gets summarized, it may be interrupted, and it is expensive to keep feeding back into the model. If code can write intermediate results to files, the next step can continue from the workspace instead of asking the model to remember everything. A saved Salesforce export, a cached CSV, a progress file, or a generated report can become durable state for the workflow.
+    Conversation history is a weak place to store operational state. It gets long, it gets summarized, it may be interrupted, and it is expensive to keep feeding back into the model. If code can write intermediate results to files, the next step can continue from the workspace instead of asking the model to remember everything. A saved Salesforce export, a cached CSV, a progress file, or a generated report can become durable state for the workflow.
 
 9. Reusable scripts and skills turn one-off agent work into accumulated workflow knowledge.
 
-If an agent writes useful code for "save this Google Sheet as CSV," that code should not disappear after the run. It can become a script, helper function, template, instruction file, or skill. This is the difference between an agent that starts from scratch every time and an agent system that slowly builds a toolbox of working methods.
+    If an agent writes useful code for "save this Google Sheet as CSV," that code should not disappear after the run. It can become a script, helper function, template, instruction file, or skill. This is the difference between an agent that starts from scratch every time and an agent system that slowly builds a toolbox of working methods.
 
 10. The deeper architecture is model + code execution + MCP APIs + workspace + skills.
 
-The interesting architecture is not just "LLM calls tool." It is more like this: the model writes code, the code calls MCP APIs, intermediate state lives in the workspace, useful outputs are saved as files, and reusable solutions become skills. That structure gives each layer a clearer job. The model handles intent and judgment. Code handles deterministic execution. MCP connects to external systems. The workspace holds state. Skills preserve successful patterns.
+    The interesting architecture is not just "LLM calls tool." It is more like this: the model writes code, the code calls MCP APIs, intermediate state lives in the workspace, useful outputs are saved as files, and reusable solutions become skills. That structure gives each layer a clearer job. The model handles intent and judgment. Code handles deterministic execution. MCP connects to external systems. The workspace holds state. Skills preserve successful patterns.
 
 11. Code execution makes agents more powerful, but it also creates a real security and operations surface.
 
-Running agent-generated code means the system now has to care about sandboxing, permissions, CPU limits, memory limits, network access, filesystem access, monitoring, malicious code, and data leakage. Direct tool calling is more limited, but it is also simpler to operate. Code execution is worth considering when the workflow needs context efficiency, state persistence, and stronger composition, but those benefits come with infrastructure responsibilities.
+    Running agent-generated code means the system now has to care about sandboxing, permissions, CPU limits, memory limits, network access, filesystem access, monitoring, malicious code, and data leakage. Direct tool calling is more limited, but it is also simpler to operate. Code execution is worth considering when the workflow needs context efficiency, state persistence, and stronger composition, but those benefits come with infrastructure responsibilities.
 
 ## How I Would Apply This To My Own System
 
