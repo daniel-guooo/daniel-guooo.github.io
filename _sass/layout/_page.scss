@@ -692,6 +692,7 @@
    ========================================================================== */
 
 .page__related {
+  width: 100%;
   margin-top: 2em;
   padding-top: 1em;
   border-top: 1px solid var(--global-border-color);
@@ -700,6 +701,7 @@
 
   @include breakpoint($large) {
     @include pre(2.5 of 12);
+    width: span(7.5 of 12);
   }
 
   a {
@@ -712,4 +714,38 @@
   margin-bottom: 10px;
   font-size: $type-size-6;
   text-transform: uppercase;
+}
+
+.related__items {
+  display: grid;
+  gap: 1em;
+
+  @include breakpoint($medium) {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+}
+
+.related__item {
+  min-width: 0;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--global-border-color);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  .archive__item-title {
+    margin-top: 0;
+    font-size: $type-size-5;
+    line-height: 1.25;
+  }
+
+  .page__meta,
+  .page__date {
+    margin: 0.25em 0 0;
+  }
+
+  .archive__item-excerpt {
+    display: none;
+  }
 }
