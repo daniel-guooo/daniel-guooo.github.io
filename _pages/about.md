@@ -44,7 +44,7 @@ I explore two frontiers:
     <div class="experience-list__body">
       <div class="experience-list__header">
         <div>
-          <h3><a href="https://z.ai/" target="_blank" rel="noopener noreferrer">Z.ai</a></h3>
+          <h3><a href="https://huggingface.co/zai-org" target="_blank" rel="noopener noreferrer">Z.ai</a></h3>
           <p class="experience-list__role">Software Engineer Intern</p>
         </div>
         <p class="experience-list__date">Jan. 2026 - Mar. 2026</p>

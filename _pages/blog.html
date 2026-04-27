@@ -1,0 +1,25 @@
+---
+layout: archive
+title: "Blog"
+permalink: /blog/
+author_profile: true
+---
+
+{% assign posts = site.posts | sort: "date" | reverse %}
+
+{% if posts.size > 0 %}
+  {% for post in posts %}
+<article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+  <h2 class="archive__item-title" itemprop="headline">
+    <a href="{{ post.url | relative_url }}" rel="permalink">{{ post.title }}</a>
+  </h2>
+  <p class="page__meta">
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+    <span aria-hidden="true"> · </span>
+    <i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}
+  </p>
+</article>
+  {% endfor %}
+{% else %}
+<p>More writing soon.</p>
+{% endif %}
