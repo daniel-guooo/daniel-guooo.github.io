@@ -151,7 +151,7 @@ I explore two frontiers:
       <h3><a href="https://www.cmu.edu/" target="_blank" rel="noopener noreferrer">Carnegie Mellon University</a></h3>
       <p>M.S. in Electrical and Computer Engineering</p>
     </div>
-    <p class="education-list__date">Sep. 2026 - Jan. 2028</p>
+    <p class="education-list__date">Sep. 2026 - Dec. 2027</p>
   </article>
 
   <article class="education-list__item">
