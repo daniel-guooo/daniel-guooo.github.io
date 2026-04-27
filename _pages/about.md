@@ -18,7 +18,7 @@ I explore two frontiers:
 - AI agents, multi-agent systems, and agent infrastructure
 - Multimodal AI across text, images, graphs, and voice
 - RAG, data pipelines, retrieval systems, and databases
-- AI for healthcare, software engineering, and high-stakes domains
+- AI for healthcare/Finance, software engineering, and high-stakes domains
 
 ## Experience
 
