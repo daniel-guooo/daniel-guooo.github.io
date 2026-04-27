@@ -5,10 +5,11 @@ permalink: /blog/
 author_profile: true
 ---
 
-{% assign posts = site.posts | sort: "date" | reverse %}
+{% assign posts_old_to_new = site.posts | sort: "date" %}
 
-{% if posts.size > 0 %}
-  {% for post in posts %}
+<div class="blog-list">
+{% if posts_old_to_new.size > 0 %}
+  {% for post in posts_old_to_new reversed %}
 <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
   <h2 class="archive__item-title" itemprop="headline">
     <a href="{{ post.url | relative_url }}" rel="permalink">{{ post.title }}</a>
@@ -23,3 +24,4 @@ author_profile: true
 {% else %}
 <p>More writing soon.</p>
 {% endif %}
+</div>
