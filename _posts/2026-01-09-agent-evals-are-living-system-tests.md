@@ -1,6 +1,6 @@
 ---
 title: "Agent Evals Are Living System Tests"
-date: 2026-01-09
+date: 2026-05-10
 ---
 
 Source: [Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents), Anthropic
