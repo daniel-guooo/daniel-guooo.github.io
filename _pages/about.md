@@ -1,7 +1,9 @@
 ---
 permalink: /
-title: "Hi, I'm Daniel 🐑"
+title: "Hi, I’m Daniel Guo🐑"
+seo_title: "Daniel Guo | AI Agents & Multimodal Machine Learning | CMU ECE"
 subtitle: 'Chasing AGI with <span class="page__subtitle-accent">Agency</span> and <span class="page__subtitle-accent">Multimodal Understanding</span>.'
+profile_line: "AI Agents · Multimodal Machine Learning · Incoming M.S. ECE @ Carnegie Mellon University"
 author_profile: true
 redirect_from:
   - /about/
