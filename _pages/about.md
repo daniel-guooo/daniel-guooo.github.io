@@ -3,14 +3,14 @@ permalink: /
 title: "Hi, I’m Daniel Guo🐑"
 seo_title: "Daniel Guo | AI Agents & Multimodal Machine Learning | CMU ECE"
 subtitle: 'Chasing AGI with <span class="page__subtitle-accent">Agency</span> and <span class="page__subtitle-accent">Multimodal Understanding</span>.'
-profile_line: "AI Agents · Multimodal Machine Learning · Incoming M.S. ECE @ Carnegie Mellon University"
 author_profile: true
 redirect_from:
   - /about/
   - /about.html
 ---
 
-Machine Learning Engineering Intern at [SHEIN](https://m.shein.com/us/?cdn_rsite=cf&ref=www&rep=dir&ret=mus){:target="_blank" rel="noopener noreferrer"}; incoming M.S. student in ECE at [Carnegie Mellon](https://www.cmu.edu/){:target="_blank" rel="noopener noreferrer"}.
+M.S. student in ECE at [Carnegie Mellon University](https://www.cmu.edu/){:target="_blank" rel="noopener noreferrer"}, graduating in December 2027. <br>
+Seeking Summer 2027 internship opportunities in AI agents and machine learning.
 <br><br>
 I explore two frontiers:
 - Building efficient, agentic, and multimodally intelligent models
@@ -26,6 +26,22 @@ I explore two frontiers:
 
 <div class="experience-list">
   <article class="experience-list__item">
+    <img class="experience-list__logo" src="/images/experience/alibaba-group.jpg" alt="Alibaba Group logo">
+    <div class="experience-list__body">
+      <div class="experience-list__header">
+        <div>
+          <h3><a href="https://www.alibaba.com/" target="_blank" rel="noopener noreferrer">Alibaba Group</a></h3>
+          <p class="experience-list__role">AI Engineering Intern</p>
+        </div>
+        <p class="experience-list__date">Jun. 2026 - Aug. 2026</p>
+      </div>
+      <ul>
+        <li>Built an agentic platform connecting promotion-domain knowledge Q&amp;A with end-to-end product and engineering workflows, exposing shared knowledge and tool capabilities to Qwen and Taobao through Skills.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="experience-list__item">
     <img class="experience-list__logo" src="/images/experience/shein.png" alt="SHEIN logo">
     <div class="experience-list__body">
       <div class="experience-list__header">
@@ -33,7 +49,7 @@ I explore two frontiers:
           <h3><a href="https://m.shein.com/us/?cdn_rsite=cf&amp;ref=www&amp;rep=dir&amp;ret=mus" target="_blank" rel="noopener noreferrer">SHEIN</a></h3>
           <p class="experience-list__role">Machine Learning Engineering Intern</p>
         </div>
-        <p class="experience-list__date">Apr. 2026 - Present</p>
+        <p class="experience-list__date">Apr. 2026 - Jun. 2026</p>
       </div>
       <ul>
         <li>Established a SWE-bench-style coding benchmark pipeline that mines internal code repositories, generates tests and tasks, and evaluates coding-agents performance.</li>
