@@ -49,7 +49,7 @@ I explore two frontiers:
           <h3><a href="https://m.shein.com/us/?cdn_rsite=cf&amp;ref=www&amp;rep=dir&amp;ret=mus" target="_blank" rel="noopener noreferrer">SHEIN</a></h3>
           <p class="experience-list__role">Machine Learning Engineering Intern</p>
         </div>
-        <p class="experience-list__date">Apr. 2026 - Jun. 2026</p>
+        <p class="experience-list__date">Mar. 2026 - Jun. 2026</p>
       </div>
       <ul>
         <li>Established a SWE-bench-style coding benchmark pipeline that mines internal code repositories, generates tests and tasks, and evaluates coding-agents performance.</li>
