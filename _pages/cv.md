@@ -7,4 +7,4 @@ redirect_from:
   - /resume
 ---
 
-CV link coming soon.
+[View / Download Resume](/files/daniel-guo-resume.pdf){:target="_blank" rel="noopener noreferrer"}
