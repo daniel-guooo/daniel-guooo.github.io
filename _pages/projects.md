@@ -7,6 +7,7 @@ author_profile: true
 
 ## Selected Projects
 
+- **Qwopus-Reasoning**: Developed a Qwen post-training pipeline with SFT, GRPO on DAPO-Math, and MTP integration, improving GPQA accuracy by 16% and inference throughput by 19% over the base model.
 - **LLaMA 3.2-Vision Object Detection System**: Built an object detection system using LLaMA 3.2-Vision, Ollama, OpenCV, FastAPI, Asyncio, and streaming responses.
 - **LLaMA 3-Based Intelligent Search and RAG**: Developed a retrieval-augmented search system with LLaMA 3, LoRA, LanceDB, Tavily, and FastAPI.
 - **Automatic Video Hand-Tracking for Stroke Recovery**: Built a computer vision pipeline using SAM2, Mediapipe, OpenCV, and PyTorch for hand-tracking in recovery videos.
