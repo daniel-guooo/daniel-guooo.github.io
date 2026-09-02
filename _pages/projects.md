@@ -7,7 +7,9 @@ author_profile: true
 
 ## Selected Projects
 
-- **Qwopus-Reasoning**: Developed a Qwen post-training pipeline with SFT, GRPO on DAPO-Math, and MTP integration, improving GPQA accuracy by 16% and inference throughput by 19% over the base model.
+- **Qwopus-Reasoning**: Post-trained Qwen through SFT on reasoning and math data, followed by GRPO with custom rewards and MTP integration; improved GPQA-Diamond accuracy by 6% and inference throughput by 11% over the base model.
+- **AgenticRL-Long Horizon Coding Agent**: Post-trained Qwen3.5-4B with GSPO on multi-turn coding trajectories using execution-verified terminal rewards, improving single-rollout task success by 7% and pass@5 by 9% over the base model.
+- **Tiny OneRec**: Built an LLM-based generative recommender by quantizing item text embeddings into Semantic IDs with an RQ-VAE and post-training Qwen through multi-task SFT for alignment and GRPO with constrained decoding and rank-aware rewards; achieved an HR@10 of 14.3% and an NDCG@10 of 10.4% on the Amazon Reviews Office Products dataset.
 - **LLaMA 3.2-Vision Object Detection System**: Built an object detection system using LLaMA 3.2-Vision, Ollama, OpenCV, FastAPI, Asyncio, and streaming responses.
 - **LLaMA 3-Based Intelligent Search and RAG**: Developed a retrieval-augmented search system with LLaMA 3, LoRA, LanceDB, Tavily, and FastAPI.
 - **Automatic Video Hand-Tracking for Stroke Recovery**: Built a computer vision pipeline using SAM2, Mediapipe, OpenCV, and PyTorch for hand-tracking in recovery videos.

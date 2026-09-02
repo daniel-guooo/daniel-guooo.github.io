@@ -9,7 +9,7 @@ redirect_from:
   - /about.html
 ---
 
-M.S. student in ECE at [Carnegie Mellon University](https://www.cmu.edu/){:target="_blank" rel="noopener noreferrer"}, graduating in December 2027. <br>
+M.S. student in ECE at [Carnegie Mellon University](https://www.cmu.edu/){:target="_blank" rel="noopener noreferrer"}, graduating in January 2028. <br>
 Seeking Summer 2027 internship opportunities in AI agents and machine learning.
 <br><br>
 I explore two frontiers:
@@ -65,7 +65,7 @@ I explore two frontiers:
           <h3><a href="https://huggingface.co/zai-org" target="_blank" rel="noopener noreferrer">Z.ai</a></h3>
           <p class="experience-list__role">Software Engineer Intern</p>
         </div>
-        <p class="experience-list__date">Jan. 2026 - Mar. 2026</p>
+        <p class="experience-list__date">Dec. 2025 - Mar. 2026</p>
       </div>
       <ul>
         <li>Architected an agent harness and testing automation workflows for Mercedes-Benz QNX software testing.</li>
@@ -118,7 +118,7 @@ I explore two frontiers:
           <p class="experience-list__advisor">Advisor: Prof. <a href="https://pengtaoxie.github.io/" target="_blank" rel="noopener noreferrer">Pengtao Xie</a></p>
           <p class="experience-list__advisor">Repo: <a href="https://github.com/daniel-guooo/MetaboliteChat" target="_blank" rel="noopener noreferrer">MetaboliteChat</a></p>
         </div>
-        <p class="experience-list__date">Mar. 2025 - Sep. 2025</p>
+        <p class="experience-list__date">Jun. 2025 - Sep. 2025</p>
       </div>
       <ul>
         <li>Combined pre-trained CNN/GNN encoders with LLaMA and Vicuna-13B to enable multimodal metabolite analysis.</li>
@@ -169,7 +169,7 @@ I explore two frontiers:
       <h3><a href="https://www.cmu.edu/" target="_blank" rel="noopener noreferrer">Carnegie Mellon University</a></h3>
       <p>M.S. in Electrical and Computer Engineering</p>
     </div>
-    <p class="education-list__date">Sep. 2026 - Dec. 2027</p>
+    <p class="education-list__date">Aug. 2026 - Jan. 2028</p>
   </article>
 
   <article class="education-list__item">
@@ -178,7 +178,7 @@ I explore two frontiers:
       <h3><a href="https://www.nyu.edu/" target="_blank" rel="noopener noreferrer">New York University</a></h3>
       <p>Major in Computer Science</p>
     </div>
-    <p class="education-list__date">Sep. 2022 - Dec. 2025</p>
+    <p class="education-list__date">Sep. 2022 - Jan. 2026</p>
   </article>
 </div>
 
