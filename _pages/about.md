@@ -36,7 +36,7 @@ I explore two frontiers:
         <p class="experience-list__date">Jun. 2026 - Aug. 2026</p>
       </div>
       <ul>
-        <li>Built an agentic platform connecting promotion-domain knowledge Q&amp;A with end-to-end product and engineering workflows, exposing shared knowledge and tool capabilities to Qwen and Taobao through Skills.</li>
+        <li>Built an agentic platform AI platform connecting promotion-domain knowledge QA with product and engineering workflows, while combining Qwen fine-tuning and reusable Agent Skills and knowledge-base across Qwen, Taobao and AliExpress</li>
       </ul>
     </div>
   </article>
