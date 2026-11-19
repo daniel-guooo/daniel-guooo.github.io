@@ -36,7 +36,8 @@ I explore two frontiers:
         <p class="experience-list__date">Jun. 2026 - Aug. 2026</p>
       </div>
       <ul>
-        <li>Built an agentic platform AI platform connecting promotion-domain knowledge QA with product and engineering workflows, while combining Qwen fine-tuning and reusable Agent Skills and knowledge-base across Qwen, Taobao and AliExpress</li>
+        <li>Built an agent platform on the pricing infrastructure behind Alibaba's e-commerce ecosystem (Taobao, AliExpress, Qwen, etc.), orchestrating Q&amp;A, requirement tickets, PRD generation, and AI coding with a state-machine backend, distributed locking, and idempotent transactions.</li>
+        <li>Built a knowledge flywheel that distills closed tickets into reusable QA via a LoRA-tuned Qwen model and BGE-M3 + DBSCAN clustering, continuously expanding what the agent can resolve on its own.</li>
       </ul>
     </div>
   </article>
@@ -52,7 +53,8 @@ I explore two frontiers:
         <p class="experience-list__date">Mar. 2026 - Jun. 2026</p>
       </div>
       <ul>
-        <li>Established a SWE-bench-style coding benchmark pipeline that mines internal code repositories, generates tests and tasks, and evaluates coding-agents performance.</li>
+        <li>Built two recall channels for SHEIN's new For You Trends tab: a two-tower retriever adapted for new-user cold start, and RQ-KMeans semantic IDs for generative retrieval over millions of trend items.</li>
+        <li>Built a SWE-bench-style benchmark pipeline that mines internal Java repositories into executable tasks and tests, enabling reproducible evaluation and regression testing of coding agents and Agent Skills.</li>
       </ul>
     </div>
   </article>
